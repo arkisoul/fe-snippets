@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family?=Quicksand");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Quicksand, sans-serif;
+  line-height: 1.5;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 50% auto;
+  min-height: 100vh;
+  place-items: center;
+  padding: 0 4em;
+}
+.hero::before, .hero::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+}
+.hero::before {
+  background-color: #226dbc;
+  -webkit-clip-path: polygon(72% 74%, 100% 27%, 100% 100%, 5% 100%);
+  clip-path: polygon(72% 74%, 100% 27%, 100% 100%, 5% 100%);
+  z-index: -1;
+}
+.hero::after {
+  background-color: #2a5f98;
+  -webkit-clip-path: polygon(63% 69%, 100% 9%, 100% 100%, 5% 100%);
+  clip-path: polygon(63% 69%, 100% 9%, 100% 100%, 5% 100%);
+  z-index: -2;
+}
+.hero--content {
+  text-align: justify;
+}
+.hero--title {
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+.hero--list {
+  list-style-type: none;
+  position: relative;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  width: 100%;
+  padding: 1em 2em;
+}
+.hero--list li {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 20% auto;
+  width: 100%;
+  padding: 1em;
+  cursor: pointer;
+  border-radius: 0.7em;
+  -webkit-transform: rotateY(-30deg) rotateX(15deg);
+          transform: rotateY(-30deg) rotateX(15deg);
+  mix-blend-mode: multiply;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+  transition: -webkit-transform ease-in-out 350ms;
+  transition: transform ease-in-out 350ms;
+  transition: transform ease-in-out 350ms, -webkit-transform ease-in-out 350ms;
+}
+.hero--list li:nth-child(1) {
+  background-color: #bfe8fc;
+  top: -75px;
+  z-index: 2;
+}
+.hero--list li:nth-child(2) {
+  background-color: #faffc8;
+  z-index: 1;
+}
+.hero--list li:nth-child(3) {
+  background-color: #f2e4ff;
+  top: 110px;
+}
+.hero--list li:hover {
+  -webkit-transform: rotateY(-22deg) rotateX(7deg) scale(1.03);
+          transform: rotateY(-22deg) rotateX(7deg) scale(1.03);
+  z-index: 3;
+  mix-blend-mode: normal;
+}
+.hero--list li img {
+  width: 70px
+}

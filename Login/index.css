@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://unsplash.it/1600/1280');
+    background-size: cover;
+}
+.loginBox {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 3em 1.5em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    text-align: center;
+    width: 90%;
+    max-width: 360px;
+    border-radius: 4px;
+}
+.loginBox .heading {
+    color: #7BC74D;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+.inputBox {
+    position: relative;
+    margin-bottom: 1.5em;
+}
+.inputBox input {
+    display: block;
+    width: 100%;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    background: transparent;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    border-radius: 4px;
+}
+.inputBox input:focus {
+    outline: none;
+    border-color: #626EEF;
+}
+.inputBox label {
+    position: absolute;
+    color: #fff;
+    left: 0.25em;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all ease-in-out 350ms;
+    font-size: 1rem;
+}
+.inputBox input:focus ~ label,
+.inputBox input:valid ~ label {
+    top: -1em;
+    font-size: 0.75rem;
+    color: #626EEF;
+}
+.inputBox input:invalid {
+    outline: none;
+    border-color: #E84A5F;
+}
+.inputBox input:invalid ~label {
+    top: -1em;
+    font-size: 0.75rem;
+    color: #E84A5F;
+}
+input[type='submit'] {
+    outline: none;
+    background: #7BC74D;
+    padding: 0.75em 2em;
+    font-size: 1rem;
+    border: 1px solid #7BC74D;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all ease-in-out 350ms;
+}
+input[type='submit']:hover,
+input[type='submit']:focus {
+    background: #56a227;
+    color: #FFF;
+    border-color: #56a227;
+    transition: all ease-in-out 350ms;
+}
